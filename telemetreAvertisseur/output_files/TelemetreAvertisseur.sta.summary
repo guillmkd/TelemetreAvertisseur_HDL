@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -3.236
+TNS   : -26.468
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[0]'
+Slack : -2.360
+TNS   : -18.202
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.204
+TNS   : -28.465
+
+Type  : Slow 1200mV 85C Model Hold 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.561
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[0]'
+Slack : 2.598
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -20.990
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[0]'
+Slack : -3.000
+TNS   : -13.280
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Slow 1200mV 0C Model Setup 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -2.870
+TNS   : -23.422
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[0]'
+Slack : -2.084
+TNS   : -16.059
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.934
+TNS   : -24.934
+
+Type  : Slow 1200mV 0C Model Hold 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[0]'
+Slack : 2.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -20.990
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[0]'
+Slack : -3.000
+TNS   : -13.280
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Fast 1200mV 0C Model Setup 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -1.049
+TNS   : -8.854
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[0]'
+Slack : -0.680
+TNS   : -5.102
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.516
+TNS   : -5.994
+
+Type  : Fast 1200mV 0C Model Hold 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[0]'
+Slack : 1.253
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -18.588
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[0]'
+Slack : -3.000
+TNS   : -12.120
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq|ClkOut'
+Slack : -1.000
+TNS   : -9.000
+
+------------------------------------------------------------

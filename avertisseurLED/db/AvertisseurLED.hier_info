@@ -1,0 +1,12 @@
+|AvertisseurLED
+Dist[0] => LessThan0.IN16
+Dist[1] => LessThan0.IN15
+Dist[2] => LessThan0.IN14
+Dist[3] => LessThan0.IN13
+Dist[4] => LessThan0.IN12
+Dist[5] => LessThan0.IN11
+Dist[6] => LessThan0.IN10
+Dist[7] => LessThan0.IN9
+Led <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

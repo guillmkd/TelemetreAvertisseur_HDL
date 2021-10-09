@@ -1,0 +1,22 @@
+|Compteur8Bits
+Clk => Signal_prec.CLK
+Clk => Q[7]~reg0.CLK
+Clk => Q[6]~reg0.CLK
+Clk => Q[5]~reg0.CLK
+Clk => Q[4]~reg0.CLK
+Clk => Q[3]~reg0.CLK
+Clk => Q[2]~reg0.CLK
+Clk => Q[1]~reg0.CLK
+Clk => Q[0]~reg0.CLK
+Signal => always0.IN1
+Signal => Signal_prec.DATAIN
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

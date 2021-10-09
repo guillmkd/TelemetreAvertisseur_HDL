@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Quartus_work/miniprojet/avertisseurLED/AvertisseurLED.v
+source_file = 1, C:/Quartus_work/miniprojet/avertisseurLED/db/AvertisseurLED.cbx.xml
+design_name = AvertisseurLED
+instance = comp, \Led~output , Led~output, AvertisseurLED, 1
+instance = comp, \Dist[4]~input , Dist[4]~input, AvertisseurLED, 1
+instance = comp, \Dist[5]~input , Dist[5]~input, AvertisseurLED, 1
+instance = comp, \Dist[6]~input , Dist[6]~input, AvertisseurLED, 1
+instance = comp, \Dist[7]~input , Dist[7]~input, AvertisseurLED, 1
+instance = comp, \LessThan0~0 , LessThan0~0, AvertisseurLED, 1
+instance = comp, \Dist[3]~input , Dist[3]~input, AvertisseurLED, 1
+instance = comp, \Dist[2]~input , Dist[2]~input, AvertisseurLED, 1
+instance = comp, \Dist[1]~input , Dist[1]~input, AvertisseurLED, 1
+instance = comp, \Dist[0]~input , Dist[0]~input, AvertisseurLED, 1

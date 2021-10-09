@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Lsq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Lsq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Byte[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Byte[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Byte[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Byte[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

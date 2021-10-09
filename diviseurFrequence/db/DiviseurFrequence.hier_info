@@ -1,0 +1,81 @@
+|DiviseurFrequence_DE2_115
+LEDR[0] <= DiviseurFrequence:inst.ClkOut
+LEDR[1] <= DiviseurFrequence:inst1.ClkOut
+CLOCK_50 => DiviseurFrequence:inst.ClkIn
+CLOCK2_50 => DiviseurFrequence:inst1.ClkIn
+
+
+|DiviseurFrequence_DE2_115|DiviseurFrequence:inst
+ClkIn => ClkOut~reg0.CLK
+ClkIn => Cnt[0].CLK
+ClkIn => Cnt[1].CLK
+ClkIn => Cnt[2].CLK
+ClkIn => Cnt[3].CLK
+ClkIn => Cnt[4].CLK
+ClkIn => Cnt[5].CLK
+ClkIn => Cnt[6].CLK
+ClkIn => Cnt[7].CLK
+ClkIn => Cnt[8].CLK
+ClkIn => Cnt[9].CLK
+ClkIn => Cnt[10].CLK
+ClkIn => Cnt[11].CLK
+ClkIn => Cnt[12].CLK
+ClkIn => Cnt[13].CLK
+ClkIn => Cnt[14].CLK
+ClkIn => Cnt[15].CLK
+ClkIn => Cnt[16].CLK
+ClkIn => Cnt[17].CLK
+ClkIn => Cnt[18].CLK
+ClkIn => Cnt[19].CLK
+ClkIn => Cnt[20].CLK
+ClkIn => Cnt[21].CLK
+ClkIn => Cnt[22].CLK
+ClkIn => Cnt[23].CLK
+ClkIn => Cnt[24].CLK
+ClkIn => Cnt[25].CLK
+ClkIn => Cnt[26].CLK
+ClkIn => Cnt[27].CLK
+ClkIn => Cnt[28].CLK
+ClkIn => Cnt[29].CLK
+ClkIn => Cnt[30].CLK
+ClkIn => Cnt[31].CLK
+ClkOut <= ClkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DiviseurFrequence_DE2_115|DiviseurFrequence:inst1
+ClkIn => ClkOut~reg0.CLK
+ClkIn => Cnt[0].CLK
+ClkIn => Cnt[1].CLK
+ClkIn => Cnt[2].CLK
+ClkIn => Cnt[3].CLK
+ClkIn => Cnt[4].CLK
+ClkIn => Cnt[5].CLK
+ClkIn => Cnt[6].CLK
+ClkIn => Cnt[7].CLK
+ClkIn => Cnt[8].CLK
+ClkIn => Cnt[9].CLK
+ClkIn => Cnt[10].CLK
+ClkIn => Cnt[11].CLK
+ClkIn => Cnt[12].CLK
+ClkIn => Cnt[13].CLK
+ClkIn => Cnt[14].CLK
+ClkIn => Cnt[15].CLK
+ClkIn => Cnt[16].CLK
+ClkIn => Cnt[17].CLK
+ClkIn => Cnt[18].CLK
+ClkIn => Cnt[19].CLK
+ClkIn => Cnt[20].CLK
+ClkIn => Cnt[21].CLK
+ClkIn => Cnt[22].CLK
+ClkIn => Cnt[23].CLK
+ClkIn => Cnt[24].CLK
+ClkIn => Cnt[25].CLK
+ClkIn => Cnt[26].CLK
+ClkIn => Cnt[27].CLK
+ClkIn => Cnt[28].CLK
+ClkIn => Cnt[29].CLK
+ClkIn => Cnt[30].CLK
+ClkIn => Cnt[31].CLK
+ClkOut <= ClkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

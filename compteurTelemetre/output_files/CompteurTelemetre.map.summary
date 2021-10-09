@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 28 09:01:03 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CompteurTelemetre
+Top-level Entity Name : CompteurTelemetre
+Family : Cyclone IV E
+Total logic elements : 18
+    Total combinational functions : 9
+    Dedicated logic registers : 17
+Total registers : 17
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

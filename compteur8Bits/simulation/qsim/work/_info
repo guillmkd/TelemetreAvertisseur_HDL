@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus_work/miniprojet/compteur8Bits/simulation/qsim
+vCompteur8Bits
+Z1 !s110 1632750942
+!i10b 1
+!s100 mGE7floSC_6QVk;1aVRSQ3
+Ik_hABMI4QEBH1LU0]H_F50
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1632750940
+8Compteur8Bits.vo
+FCompteur8Bits.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1632750941.000000
+!s107 Compteur8Bits.vo|
+!s90 -work|work|Compteur8Bits.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@compteur8@bits
+vCompteur8Bits_vlg_vec_tst
+R1
+!i10b 1
+!s100 gVBY@6CJSG9f@P[BOf;;J2
+In`>]>^=kIcEeVIc]zaS1l0
+R2
+R0
+w1632750937
+8TestCompteur8Bits.vwf.vt
+FTestCompteur8Bits.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1632750942.000000
+!s107 TestCompteur8Bits.vwf.vt|
+!s90 -work|work|TestCompteur8Bits.vwf.vt|
+!i113 1
+R4
+R5
+n@compteur8@bits_vlg_vec_tst

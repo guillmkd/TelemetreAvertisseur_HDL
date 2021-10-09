@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus_work/miniprojet/aff7SegDec/simulation/qsim
+vAff7SegDec
+Z1 !s110 1632749911
+!i10b 1
+!s100 O9GQ;Xh<nTAm48XfGP?fP2
+IZ6?6JiS=]zmnX4UKmaIe_3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1632749909
+8Aff7SegDec.vo
+FAff7SegDec.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1632749911.000000
+!s107 Aff7SegDec.vo|
+!s90 -work|work|Aff7SegDec.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@aff7@seg@dec
+vAff7SegDec_vlg_vec_tst
+R1
+!i10b 1
+!s100 4H;<k[iQ3zW35KgGmOU^e3
+IW^eaj^oDWYDn7<:=i@04z1
+R2
+R0
+w1632749906
+8TestAff7SegDec.vwf.vt
+FTestAff7SegDec.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 TestAff7SegDec.vwf.vt|
+!s90 -work|work|TestAff7SegDec.vwf.vt|
+!i113 1
+R5
+R6
+n@aff7@seg@dec_vlg_vec_tst

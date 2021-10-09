@@ -1,0 +1,219 @@
+|SchematicTelemetreAvertisseur
+HEX0[6] <= TelemetreAvertisseur:inst.AFF3[0]
+HEX0[5] <= TelemetreAvertisseur:inst.AFF3[1]
+HEX0[4] <= TelemetreAvertisseur:inst.AFF3[2]
+HEX0[3] <= TelemetreAvertisseur:inst.AFF3[3]
+HEX0[2] <= TelemetreAvertisseur:inst.AFF3[4]
+HEX0[1] <= TelemetreAvertisseur:inst.AFF3[5]
+HEX0[0] <= TelemetreAvertisseur:inst.AFF3[6]
+GPIO[0] => TelemetreAvertisseur:inst.PWM
+CLOCK_50 => TelemetreAvertisseur:inst.Clk
+HEX1[6] <= TelemetreAvertisseur:inst.AFF2[0]
+HEX1[5] <= TelemetreAvertisseur:inst.AFF2[1]
+HEX1[4] <= TelemetreAvertisseur:inst.AFF2[2]
+HEX1[3] <= TelemetreAvertisseur:inst.AFF2[3]
+HEX1[2] <= TelemetreAvertisseur:inst.AFF2[4]
+HEX1[1] <= TelemetreAvertisseur:inst.AFF2[5]
+HEX1[0] <= TelemetreAvertisseur:inst.AFF2[6]
+HEX2[6] <= TelemetreAvertisseur:inst.AFF1[0]
+HEX2[5] <= TelemetreAvertisseur:inst.AFF1[1]
+HEX2[4] <= TelemetreAvertisseur:inst.AFF1[2]
+HEX2[3] <= TelemetreAvertisseur:inst.AFF1[3]
+HEX2[2] <= TelemetreAvertisseur:inst.AFF1[4]
+HEX2[1] <= TelemetreAvertisseur:inst.AFF1[5]
+HEX2[0] <= TelemetreAvertisseur:inst.AFF1[6]
+LEDR[0] <= TelemetreAvertisseur:inst.LED
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst
+PWM => PWM.IN1
+Clk => Clk.IN1
+AFF1[0] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[1] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[2] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[3] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[4] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[5] <= Aff7SegDec:AfficheurCentaines.port1
+AFF1[6] <= Aff7SegDec:AfficheurCentaines.port1
+AFF2[0] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[1] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[2] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[3] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[4] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[5] <= Aff7SegDec:AfficheurDizaines.port1
+AFF2[6] <= Aff7SegDec:AfficheurDizaines.port1
+AFF3[0] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[1] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[2] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[3] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[4] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[5] <= Aff7SegDec:AfficheurUnites.port1
+AFF3[6] <= Aff7SegDec:AfficheurUnites.port1
+LED <= AvertisseurLED:Avertisseur.port1
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|DiviseurFrequence:DivFreq
+ClkIn => ClkOut~reg0.CLK
+ClkIn => Cnt[0].CLK
+ClkIn => Cnt[1].CLK
+ClkIn => Cnt[2].CLK
+ClkIn => Cnt[3].CLK
+ClkIn => Cnt[4].CLK
+ClkIn => Cnt[5].CLK
+ClkIn => Cnt[6].CLK
+ClkIn => Cnt[7].CLK
+ClkIn => Cnt[8].CLK
+ClkIn => Cnt[9].CLK
+ClkIn => Cnt[10].CLK
+ClkIn => Cnt[11].CLK
+ClkIn => Cnt[12].CLK
+ClkOut <= ClkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|CompteurTelemetre:Telemetre
+PWM => PWM.IN2
+ClkRef => ClkRef.IN1
+Dist[0] <= BasculeD8bits:BasculeD.port2
+Dist[1] <= BasculeD8bits:BasculeD.port2
+Dist[2] <= BasculeD8bits:BasculeD.port2
+Dist[3] <= BasculeD8bits:BasculeD.port2
+Dist[4] <= BasculeD8bits:BasculeD.port2
+Dist[5] <= BasculeD8bits:BasculeD.port2
+Dist[6] <= BasculeD8bits:BasculeD.port2
+Dist[7] <= BasculeD8bits:BasculeD.port2
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|CompteurTelemetre:Telemetre|Compteur8Bits:Compteur
+Clk => Signal_prec.CLK
+Clk => Q[7]~reg0.CLK
+Clk => Q[6]~reg0.CLK
+Clk => Q[5]~reg0.CLK
+Clk => Q[4]~reg0.CLK
+Clk => Q[3]~reg0.CLK
+Clk => Q[2]~reg0.CLK
+Clk => Q[1]~reg0.CLK
+Clk => Q[0]~reg0.CLK
+Signal => always0.IN1
+Signal => Signal_prec.DATAIN
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|CompteurTelemetre:Telemetre|BasculeD8bits:BasculeD
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Clk => Q[0]~reg0.CLK
+Clk => Q[1]~reg0.CLK
+Clk => Q[2]~reg0.CLK
+Clk => Q[3]~reg0.CLK
+Clk => Q[4]~reg0.CLK
+Clk => Q[5]~reg0.CLK
+Clk => Q[6]~reg0.CLK
+Clk => Q[7]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|AvertisseurLED:Avertisseur
+Dist[0] => LessThan0.IN16
+Dist[1] => LessThan0.IN15
+Dist[2] => LessThan0.IN14
+Dist[3] => LessThan0.IN13
+Dist[4] => LessThan0.IN12
+Dist[5] => LessThan0.IN11
+Dist[6] => LessThan0.IN10
+Dist[7] => LessThan0.IN9
+Led <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|SeparateurNumeration8Bits:Separateur
+Val[0] => Div0.IN14
+Val[0] => Mod0.IN14
+Val[1] => Div0.IN13
+Val[1] => Mod0.IN13
+Val[2] => Div0.IN12
+Val[2] => Mod0.IN12
+Val[3] => Div0.IN11
+Val[3] => Mod0.IN11
+Val[4] => Div0.IN10
+Val[4] => Mod0.IN10
+Val[5] => Div0.IN9
+Val[5] => Mod0.IN9
+Val[6] => Div0.IN8
+Val[6] => Mod0.IN8
+Val[7] => Div0.IN7
+Val[7] => Mod0.IN7
+C[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= Div1.DB_MAX_OUTPUT_PORT_TYPE
+U[0] <= Mod1.DB_MAX_OUTPUT_PORT_TYPE
+U[1] <= Mod1.DB_MAX_OUTPUT_PORT_TYPE
+U[2] <= Mod1.DB_MAX_OUTPUT_PORT_TYPE
+U[3] <= Mod1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|Aff7SegDec:AfficheurCentaines
+Byte[0] => Decoder0.IN3
+Byte[1] => Decoder0.IN2
+Byte[2] => Decoder0.IN1
+Byte[3] => Decoder0.IN0
+Lsq[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[5] <= iLsq.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|Aff7SegDec:AfficheurDizaines
+Byte[0] => Decoder0.IN3
+Byte[1] => Decoder0.IN2
+Byte[2] => Decoder0.IN1
+Byte[3] => Decoder0.IN0
+Lsq[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[5] <= iLsq.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SchematicTelemetreAvertisseur|TelemetreAvertisseur:inst|Aff7SegDec:AfficheurUnites
+Byte[0] => Decoder0.IN3
+Byte[1] => Decoder0.IN2
+Byte[2] => Decoder0.IN1
+Byte[3] => Decoder0.IN0
+Lsq[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[5] <= iLsq.DB_MAX_OUTPUT_PORT_TYPE
+Lsq[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

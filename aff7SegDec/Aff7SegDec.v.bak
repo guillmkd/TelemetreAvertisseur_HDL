@@ -1,0 +1,34 @@
+module DoubleAff7SegHexa(Byte,Sq);
+
+parameter OUTPUT_POLARITY = 0; //'0' allume ou '1' allume
+
+input[7:0] Byte;
+output[0:6] Sq;
+
+reg[0:6] Sq;
+
+always @(Byte)
+begin
+
+	case (Byte[7:4])
+		0 : iMsq[0:6] <= 7'b1111110;
+		1 : iMsq[0:6] <= 7'b0110000;
+		2 : iMsq[0:6] <= 7'b1101101;
+		3 : iMsq[0:6] <= 7'b1111001;
+		4 : iMsq[0:6] <= 7'b0110011;
+		5 : iMsq[0:6] <= 7'b1011011;
+		6 : iMsq[0:6] <= 7'b1011111;
+		7 : iMsq[0:6] <= 7'b1110000;
+		8 : iMsq[0:6] <= 7'b1111111;
+		9 : iMsq[0:6] <= 7'b1111011;
+	endcase
+
+
+end
+
+assign Msq = (OUTPUT_POLARITY==1)?iMsq:~iMsq;
+
+assign Lsq = (OUTPUT_POLARITY==1)?iLsq:~iLsq;
+
+
+endmodule

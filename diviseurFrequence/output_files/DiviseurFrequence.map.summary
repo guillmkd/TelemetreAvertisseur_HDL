@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 23 16:31:30 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : DiviseurFrequence
+Top-level Entity Name : DiviseurFrequence_DE2_115
+Family : Cyclone IV E
+Total logic elements : 98
+    Total combinational functions : 98
+    Dedicated logic registers : 66
+Total registers : 66
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

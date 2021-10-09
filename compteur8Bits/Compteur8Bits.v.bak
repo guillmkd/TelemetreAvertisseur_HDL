@@ -1,0 +1,24 @@
+module Compteur8Bits(Clk, Signal, Q);
+
+input Clk;
+input Signal;
+output[0:7] Q;
+
+reg[0:7] Q;
+
+
+always @(negedge(Clk),posedge(Signal))
+begin
+	if(Signal == 0)
+	begin
+		Q <= 0;
+	end
+	else
+	begin
+		Q <= Q + 1;
+	end
+end
+
+
+
+endmodule

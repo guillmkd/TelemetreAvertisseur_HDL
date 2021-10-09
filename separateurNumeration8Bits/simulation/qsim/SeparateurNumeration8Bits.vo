@@ -1,0 +1,3282 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+
+// DATE "09/28/2021 09:15:19"
+
+// 
+// Device: Altera EP4CE6E22C7 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module SeparateurNumeration8Bits (
+	Val,
+	C,
+	D,
+	U);
+input 	[7:0] Val;
+output 	[3:0] C;
+output 	[3:0] D;
+output 	[3:0] U;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \C[0]~output_o ;
+wire \C[1]~output_o ;
+wire \C[2]~output_o ;
+wire \C[3]~output_o ;
+wire \D[0]~output_o ;
+wire \D[1]~output_o ;
+wire \D[2]~output_o ;
+wire \D[3]~output_o ;
+wire \U[0]~output_o ;
+wire \U[1]~output_o ;
+wire \U[2]~output_o ;
+wire \U[3]~output_o ;
+wire \Val[7]~input_o ;
+wire \Val[6]~input_o ;
+wire \Val[5]~input_o ;
+wire \Val[4]~input_o ;
+wire \Val[3]~input_o ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[54]~0_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[54]~1_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[53]~2_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[53]~3_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[52]~4_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[52]~5_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[51]~6_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[51]~7_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[50]~8_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[50]~9_combout ;
+wire \Val[2]~input_o ;
+wire \Div0|auto_generated|divider|divider|StageOut[49]~10_combout ;
+wire \Div0|auto_generated|divider|divider|StageOut[49]~11_combout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ;
+wire \Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[50]~40_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[50]~41_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[49]~42_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[49]~43_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[54]~32_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[54]~33_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[53]~35_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[52]~36_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[52]~37_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[61]~45_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[16]~50_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[16]~38_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[15]~51_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[59]~47_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[15]~39_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[18]~48_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[18]~36_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[17]~49_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[17]~37_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[23]~52_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[23]~40_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[22]~53_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[22]~41_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[21]~54_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[21]~42_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[20]~58_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[58]~49_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[20]~43_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[28]~55_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[28]~44_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[27]~56_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[27]~45_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[26]~57_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[26]~46_combout ;
+wire \Val[1]~input_o ;
+wire \Mod0|auto_generated|divider|divider|StageOut[48]~51_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[48]~52_combout ;
+wire \Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[25]~59_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[57]~53_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ;
+wire \Div1|auto_generated|divider|divider|StageOut[25]~47_combout ;
+wire \Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7_cout ;
+wire \Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8_combout ;
+wire \Val[0]~input_o ;
+wire \Mod0|auto_generated|divider|divider|StageOut[56]~54_combout ;
+wire \Mod0|auto_generated|divider|divider|StageOut[56]~55_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[16]~38_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[15]~39_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[18]~52_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[18]~36_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[17]~37_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[23]~56_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[23]~40_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[22]~41_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[21]~42_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[20]~43_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[28]~59_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[28]~44_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[27]~45_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[26]~46_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[25]~47_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~7 ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9_cout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[30]~48_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[31]~49_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[32]~50_combout ;
+wire \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6_combout ;
+wire \Mod1|auto_generated|divider|divider|StageOut[33]~51_combout ;
+
+
+cycloneive_io_obuf \C[0]~output (
+	.i(!\Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\C[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \C[0]~output .bus_hold = "false";
+defparam \C[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \C[1]~output (
+	.i(!\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\C[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \C[1]~output .bus_hold = "false";
+defparam \C[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \C[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\C[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \C[2]~output .bus_hold = "false";
+defparam \C[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \C[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\C[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \C[3]~output .bus_hold = "false";
+defparam \C[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \D[0]~output (
+	.i(!\Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\D[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \D[0]~output .bus_hold = "false";
+defparam \D[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \D[1]~output (
+	.i(!\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\D[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \D[1]~output .bus_hold = "false";
+defparam \D[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \D[2]~output (
+	.i(!\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\D[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \D[2]~output .bus_hold = "false";
+defparam \D[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \D[3]~output (
+	.i(!\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\D[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \D[3]~output .bus_hold = "false";
+defparam \D[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \U[0]~output (
+	.i(\Mod1|auto_generated|divider|divider|StageOut[30]~48_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\U[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \U[0]~output .bus_hold = "false";
+defparam \U[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \U[1]~output (
+	.i(\Mod1|auto_generated|divider|divider|StageOut[31]~49_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\U[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \U[1]~output .bus_hold = "false";
+defparam \U[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \U[2]~output (
+	.i(\Mod1|auto_generated|divider|divider|StageOut[32]~50_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\U[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \U[2]~output .bus_hold = "false";
+defparam \U[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_obuf \U[3]~output (
+	.i(\Mod1|auto_generated|divider|divider|StageOut[33]~51_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\U[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \U[3]~output .bus_hold = "false";
+defparam \U[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[7]~input (
+	.i(Val[7]),
+	.ibar(gnd),
+	.o(\Val[7]~input_o ));
+// synopsys translate_off
+defparam \Val[7]~input .bus_hold = "false";
+defparam \Val[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[6]~input (
+	.i(Val[6]),
+	.ibar(gnd),
+	.o(\Val[6]~input_o ));
+// synopsys translate_off
+defparam \Val[6]~input .bus_hold = "false";
+defparam \Val[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[5]~input (
+	.i(Val[5]),
+	.ibar(gnd),
+	.o(\Val[5]~input_o ));
+// synopsys translate_off
+defparam \Val[5]~input .bus_hold = "false";
+defparam \Val[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[4]~input (
+	.i(Val[4]),
+	.ibar(gnd),
+	.o(\Val[4]~input_o ));
+// synopsys translate_off
+defparam \Val[4]~input .bus_hold = "false";
+defparam \Val[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[3]~input (
+	.i(Val[3]),
+	.ibar(gnd),
+	.o(\Val[3]~input_o ));
+// synopsys translate_off
+defparam \Val[3]~input .bus_hold = "false";
+defparam \Val[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout  = \Val[3]~input_o  $ (VCC)
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1  = CARRY(\Val[3]~input_o )
+
+	.dataa(\Val[3]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 .lut_mask = 16'h55AA;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout  = (\Val[4]~input_o  & (\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1  & VCC)) # (!\Val[4]~input_o  & (!\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 
+// ))
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3  = CARRY((!\Val[4]~input_o  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ))
+
+	.dataa(\Val[4]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 .lut_mask = 16'hA505;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout  = (\Val[5]~input_o  & ((GND) # (!\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ))) # (!\Val[5]~input_o  & 
+// (\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3  $ (GND)))
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5  = CARRY((\Val[5]~input_o ) # (!\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ))
+
+	.dataa(\Val[5]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 .lut_mask = 16'h5AAF;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout  = (\Val[6]~input_o  & (!\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 )) # (!\Val[6]~input_o  & ((\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ) # 
+// (GND)))
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  = CARRY((!\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ) # (!\Val[6]~input_o ))
+
+	.dataa(\Val[6]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 .lut_mask = 16'h5A5F;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout  = (\Val[7]~input_o  & (\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  $ (GND))) # (!\Val[7]~input_o  & 
+// (!\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  & VCC))
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~9  = CARRY((\Val[7]~input_o  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ))
+
+	.dataa(\Val[7]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 .lut_mask = 16'hA50A;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  = !\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 .lut_mask = 16'h0F0F;
+defparam \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[54]~0 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[54]~0_combout  = (\Val[7]~input_o  & \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[7]~input_o ),
+	.datab(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[54]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[54]~0 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[54]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[54]~1 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[54]~1_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[54]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[54]~1 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[54]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[53]~2 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[53]~2_combout  = (\Val[6]~input_o  & \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[6]~input_o ),
+	.datab(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[53]~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[53]~2 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[53]~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[53]~3 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[53]~3_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[53]~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[53]~3 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[53]~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[52]~4 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[52]~4_combout  = (\Val[5]~input_o  & \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[5]~input_o ),
+	.datab(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[52]~4_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[52]~4 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[52]~4 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[52]~5 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[52]~5_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[52]~5_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[52]~5 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[52]~5 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[51]~6 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[51]~6_combout  = (\Val[4]~input_o  & \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[4]~input_o ),
+	.datab(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[51]~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[51]~6 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[51]~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[51]~7 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[51]~7_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[51]~7_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[51]~7 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[51]~7 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[50]~8 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[50]~8_combout  = (\Val[3]~input_o  & \Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[3]~input_o ),
+	.datab(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[50]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[50]~8 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[50]~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[50]~9 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[50]~9_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[50]~9_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[50]~9 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[50]~9 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[2]~input (
+	.i(Val[2]),
+	.ibar(gnd),
+	.o(\Val[2]~input_o ));
+// synopsys translate_off
+defparam \Val[2]~input .bus_hold = "false";
+defparam \Val[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[49]~10 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[49]~10_combout  = (\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & \Val[2]~input_o )
+
+	.dataa(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datab(\Val[2]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[49]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[49]~10 .lut_mask = 16'h8888;
+defparam \Div0|auto_generated|divider|divider|StageOut[49]~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|StageOut[49]~11 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|StageOut[49]~11_combout  = (\Val[2]~input_o  & !\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[2]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Div0|auto_generated|divider|divider|StageOut[49]~11_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|StageOut[49]~11 .lut_mask = 16'h00AA;
+defparam \Div0|auto_generated|divider|divider|StageOut[49]~11 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1_cout  = CARRY((\Div0|auto_generated|divider|divider|StageOut[49]~10_combout ) # (\Div0|auto_generated|divider|divider|StageOut[49]~11_combout ))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[49]~10_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[49]~11_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 .lut_mask = 16'h00EE;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3_cout  = CARRY((!\Div0|auto_generated|divider|divider|StageOut[50]~8_combout  & (!\Div0|auto_generated|divider|divider|StageOut[50]~9_combout  & 
+// !\Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1_cout )))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[50]~8_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[50]~9_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[2]~1_cout ),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 .lut_mask = 16'h0001;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5_cout  = CARRY((\Div0|auto_generated|divider|divider|StageOut[51]~6_combout ) # ((\Div0|auto_generated|divider|divider|StageOut[51]~7_combout ) # 
+// (!\Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3_cout )))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[51]~6_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[51]~7_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[3]~3_cout ),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 .lut_mask = 16'h00EF;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7_cout  = CARRY(((!\Div0|auto_generated|divider|divider|StageOut[52]~4_combout  & !\Div0|auto_generated|divider|divider|StageOut[52]~5_combout )) # 
+// (!\Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5_cout ))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[52]~4_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[52]~5_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[4]~5_cout ),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 .lut_mask = 16'h001F;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9_cout  = CARRY((!\Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7_cout  & ((\Div0|auto_generated|divider|divider|StageOut[53]~2_combout ) # 
+// (\Div0|auto_generated|divider|divider|StageOut[53]~3_combout ))))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[53]~2_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[53]~3_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[5]~7_cout ),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 .lut_mask = 16'h000E;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout  = CARRY((!\Div0|auto_generated|divider|divider|StageOut[54]~0_combout  & (!\Div0|auto_generated|divider|divider|StageOut[54]~1_combout  & 
+// !\Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9_cout )))
+
+	.dataa(\Div0|auto_generated|divider|divider|StageOut[54]~0_combout ),
+	.datab(\Div0|auto_generated|divider|divider|StageOut[54]~1_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[6]~9_cout ),
+	.combout(),
+	.cout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ));
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 .lut_mask = 16'h0001;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 (
+// Equation(s):
+// \Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  = \Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ),
+	.combout(\Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 .lut_mask = 16'hF0F0;
+defparam \Div0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout  = \Val[3]~input_o  $ (VCC)
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1  = CARRY(\Val[3]~input_o )
+
+	.dataa(\Val[3]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 .lut_mask = 16'h55AA;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout  = (\Val[4]~input_o  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1  & VCC)) # (!\Val[4]~input_o  & (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 
+// ))
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3  = CARRY((!\Val[4]~input_o  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ))
+
+	.dataa(\Val[4]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~1 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 .lut_mask = 16'hA505;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout  = (\Val[5]~input_o  & ((GND) # (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ))) # (!\Val[5]~input_o  & 
+// (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3  $ (GND)))
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5  = CARRY((\Val[5]~input_o ) # (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ))
+
+	.dataa(\Val[5]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~3 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 .lut_mask = 16'h5AAF;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout  = (\Val[6]~input_o  & (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 )) # (!\Val[6]~input_o  & ((\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ) # 
+// (GND)))
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  = CARRY((!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ) # (!\Val[6]~input_o ))
+
+	.dataa(\Val[6]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~5 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 .lut_mask = 16'h5A5F;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout  = (\Val[7]~input_o  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  $ (GND))) # (!\Val[7]~input_o  & 
+// (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7  & VCC))
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~9  = CARRY((\Val[7]~input_o  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ))
+
+	.dataa(\Val[7]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~7 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 .lut_mask = 16'hA50A;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  = !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~9 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 .lut_mask = 16'h0F0F;
+defparam \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[51]~38 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[51]~38_combout  = (\Val[4]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[4]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[51]~38 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[51]~38 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[51]~39 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[51]~39_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[51]~39 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[51]~39 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[50]~40 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[50]~40_combout  = (\Val[3]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[3]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[50]~40_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[50]~40 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[50]~40 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[50]~41 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[50]~41_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[50]~41_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[50]~41 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[50]~41 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[49]~42 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[49]~42_combout  = (\Val[2]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[2]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[49]~42_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[49]~42 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[49]~42 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[49]~43 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[49]~43_combout  = (\Val[2]~input_o  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[2]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[49]~43_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[49]~43 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[49]~43 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout  = (((\Mod0|auto_generated|divider|divider|StageOut[49]~42_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[49]~43_combout )))
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1  = CARRY((\Mod0|auto_generated|divider|divider|StageOut[49]~42_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[49]~43_combout ))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[49]~42_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[49]~43_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0 .lut_mask = 16'h11EE;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1  & (((\Mod0|auto_generated|divider|divider|StageOut[50]~40_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[50]~41_combout )))) # (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1  & (!\Mod0|auto_generated|divider|divider|StageOut[50]~40_combout  & 
+// (!\Mod0|auto_generated|divider|divider|StageOut[50]~41_combout )))
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3  = CARRY((!\Mod0|auto_generated|divider|divider|StageOut[50]~40_combout  & (!\Mod0|auto_generated|divider|divider|StageOut[50]~41_combout  & 
+// !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 )))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[50]~40_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[50]~41_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~1 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2 .lut_mask = 16'hE101;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3  & ((((\Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ))))) # (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3  & ((\Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ) # (GND))))
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5  = CARRY((\Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ) # ((\Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 )))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[51]~38_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[51]~39_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~3 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4 .lut_mask = 16'h1EEF;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[54]~32 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[54]~32_combout  = (\Val[7]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[7]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[54]~32_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[54]~32 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[54]~32 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[54]~33 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[54]~33_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[6]~8_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[54]~33_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[54]~33 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[54]~33 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[53]~34 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[53]~34_combout  = (\Val[6]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[6]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[53]~34 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[53]~34 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[53]~35 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[53]~35_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[53]~35_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[53]~35 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[53]~35 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[52]~36 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[52]~36_combout  = (\Val[5]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[5]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[52]~36_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[52]~36 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[52]~36 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[52]~37 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[52]~37_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[52]~37_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[52]~37 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[52]~37 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout  = (\Mod0|auto_generated|divider|divider|StageOut[52]~36_combout  & (((!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 )))) # 
+// (!\Mod0|auto_generated|divider|divider|StageOut[52]~36_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[52]~37_combout  & (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 )) # 
+// (!\Mod0|auto_generated|divider|divider|StageOut[52]~37_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 ) # (GND)))))
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7  = CARRY(((!\Mod0|auto_generated|divider|divider|StageOut[52]~36_combout  & !\Mod0|auto_generated|divider|divider|StageOut[52]~37_combout )) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 ))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[52]~36_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[52]~37_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~5 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6 .lut_mask = 16'h1E1F;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7  & (((\Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[53]~35_combout )))) # (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7  & ((((\Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[53]~35_combout )))))
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~9  = CARRY((!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7  & ((\Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[53]~35_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[53]~34_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[53]~35_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~7 ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout ),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8 .lut_mask = 16'hE10E;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout  = CARRY((!\Mod0|auto_generated|divider|divider|StageOut[54]~32_combout  & (!\Mod0|auto_generated|divider|divider|StageOut[54]~33_combout  & 
+// !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 )))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[54]~32_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[54]~33_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~9 ),
+	.combout(),
+	.cout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ));
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 .lut_mask = 16'h0001;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  = \Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[7]~11_cout ),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 .lut_mask = 16'hF0F0;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[62]~56 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[62]~56_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & ((\Val[6]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[5]~6_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(\Val[6]~input_o ),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[62]~56 .lut_mask = 16'hE200;
+defparam \Mod0|auto_generated|divider|divider|StageOut[62]~56 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[62]~44 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[62]~44_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[62]~44 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[62]~44 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[61]~57 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[61]~57_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & ((\Val[5]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[4]~4_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(\Val[5]~input_o ),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[61]~57 .lut_mask = 16'hE200;
+defparam \Mod0|auto_generated|divider|divider|StageOut[61]~57 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[61]~45 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[61]~45_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[61]~45 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[61]~45 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[60]~58 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[60]~58_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & ((\Val[4]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[3]~2_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(\Val[4]~input_o ),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[60]~58 .lut_mask = 16'hE200;
+defparam \Mod0|auto_generated|divider|divider|StageOut[60]~58 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[60]~46 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[60]~46_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[60]~46 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[60]~46 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  = (((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  = CARRY((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  & (((\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  & (!\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout  & 
+// (!\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  = CARRY((!\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout  & (!\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 )))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & (((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & ((((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout )))))
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~5  = CARRY((!\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & ((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  = !\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 .lut_mask = 16'h0F0F;
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[16]~50 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[16]~50_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[16]~50_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[16]~50 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[16]~50 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[16]~38 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[16]~38_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[16]~38_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[16]~38 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[16]~38 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[59]~59 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[59]~59_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & ((\Val[3]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[2]~0_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datac(\Val[3]~input_o ),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[59]~59 .lut_mask = 16'hE200;
+defparam \Mod0|auto_generated|divider|divider|StageOut[59]~59 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[15]~51 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[15]~51_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[15]~51 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[15]~51 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[59]~47 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[59]~47_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[59]~47_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[59]~47 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[59]~47 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  = (\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[59]~47_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[59]~47_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 .lut_mask = 16'hEEEE;
+defparam \Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[15]~39 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[15]~39_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[15]~39_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[15]~39 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[15]~39 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  = (((\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ) # (\Div1|auto_generated|divider|divider|StageOut[15]~39_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  = CARRY((\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ) # (\Div1|auto_generated|divider|divider|StageOut[15]~39_combout ))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[15]~39_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  & (((\Div1|auto_generated|divider|divider|StageOut[16]~50_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[16]~38_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  & (!\Div1|auto_generated|divider|divider|StageOut[16]~50_combout  & 
+// (!\Div1|auto_generated|divider|divider|StageOut[16]~38_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[16]~50_combout  & (!\Div1|auto_generated|divider|divider|StageOut[16]~38_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[16]~50_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[16]~38_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[18]~48 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[18]~48_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[18]~48_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[18]~48 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[18]~48 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[18]~36 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[18]~36_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[18]~36_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[18]~36 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[18]~36 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[17]~49 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[17]~49_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[17]~49 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[17]~49 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[17]~37 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[17]~37_combout  = (\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[17]~37_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[17]~37 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[17]~37 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & (((\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[17]~37_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & ((((\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[17]~37_combout )))))
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~5  = CARRY((!\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & ((\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[17]~37_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[17]~37_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[18]~48_combout  & (!\Div1|auto_generated|divider|divider|StageOut[18]~36_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[18]~48_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[18]~36_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 .lut_mask = 16'h0001;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  = \Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 .lut_mask = 16'hF0F0;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[23]~52 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[23]~52_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[17]~49_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[23]~52_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[23]~52 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[23]~52 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[23]~40 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[23]~40_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[23]~40_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[23]~40 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[23]~40 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[22]~53 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[22]~53_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[16]~50_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[16]~50_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[22]~53 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[22]~53 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[22]~41 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[22]~41_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[22]~41_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[22]~41 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[22]~41 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[21]~54 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[21]~54_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  & !\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[15]~51_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[21]~54_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[21]~54 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[21]~54 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[21]~42 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[21]~42_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[21]~42_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[21]~42 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[21]~42 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[20]~58 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[20]~58_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Val[2]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Val[2]~input_o ),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[20]~58 .lut_mask = 16'hE200;
+defparam \Div1|auto_generated|divider|divider|StageOut[20]~58 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[58]~48 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[58]~48_combout  = (\Val[2]~input_o  & \Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Val[2]~input_o ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[58]~48 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[58]~48 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[58]~49 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[58]~49_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[58]~49_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[58]~49 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[58]~49 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  = (\Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[58]~49_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[58]~49_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 .lut_mask = 16'hEEEE;
+defparam \Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[20]~43 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[20]~43_combout  = (\Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[20]~43_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[20]~43 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[20]~43 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout  = (((\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ) # (\Div1|auto_generated|divider|divider|StageOut[20]~43_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  = CARRY((\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ) # (\Div1|auto_generated|divider|divider|StageOut[20]~43_combout ))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[20]~43_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  & (((\Div1|auto_generated|divider|divider|StageOut[21]~54_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[21]~42_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  & (!\Div1|auto_generated|divider|divider|StageOut[21]~54_combout  & 
+// (!\Div1|auto_generated|divider|divider|StageOut[21]~42_combout )))
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[21]~54_combout  & (!\Div1|auto_generated|divider|divider|StageOut[21]~42_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[21]~54_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[21]~42_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & (((\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[22]~41_combout )))) # (!\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & ((((\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[22]~41_combout )))))
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~5  = CARRY((!\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & ((\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[22]~41_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[22]~41_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[23]~52_combout  & (!\Div1|auto_generated|divider|divider|StageOut[23]~40_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[23]~52_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[23]~40_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 .lut_mask = 16'h0001;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  = \Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 .lut_mask = 16'hF0F0;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[28]~55 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[28]~55_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[22]~53_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[28]~55_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[28]~55 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[28]~55 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[28]~44 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[28]~44_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout  & !\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[28]~44_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[28]~44 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[28]~44 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[27]~56 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[27]~56_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[21]~54_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[21]~54_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[27]~56_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[27]~56 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[27]~56 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[27]~45 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[27]~45_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout  & !\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[27]~45_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[27]~45 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[27]~45 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[26]~57 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[26]~57_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ) # 
+// ((\Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  & !\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.datab(\Div1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Div1|auto_generated|divider|divider|StageOut[20]~58_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[26]~57_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[26]~57 .lut_mask = 16'hF020;
+defparam \Div1|auto_generated|divider|divider|StageOut[26]~57 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[26]~46 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[26]~46_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout  & !\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[26]~46_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[26]~46 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[26]~46 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[1]~input (
+	.i(Val[1]),
+	.ibar(gnd),
+	.o(\Val[1]~input_o ));
+// synopsys translate_off
+defparam \Val[1]~input .bus_hold = "false";
+defparam \Val[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[48]~51 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[48]~51_combout  = (\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout  & \Val[1]~input_o )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.datab(\Val[1]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[48]~51_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[48]~51 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[48]~51 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[48]~52 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[48]~52_combout  = (\Val[1]~input_o  & !\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout )
+
+	.dataa(\Val[1]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_6_result_int[7]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[48]~52_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[48]~52 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[48]~52 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout  = (\Mod0|auto_generated|divider|divider|StageOut[48]~51_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[48]~52_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[48]~51_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[48]~52_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14 .lut_mask = 16'hEEEE;
+defparam \Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[25]~59 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[25]~59_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Val[1]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Val[1]~input_o ),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[25]~59_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[25]~59 .lut_mask = 16'hE200;
+defparam \Div1|auto_generated|divider|divider|StageOut[25]~59 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[57]~50 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[57]~50_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & \Val[1]~input_o )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datab(\Val[1]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[57]~50 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[57]~50 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[57]~53 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[57]~53_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[57]~53_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[57]~53 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[57]~53 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout  = (\Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[57]~53_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[57]~53_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 .lut_mask = 16'hEEEE;
+defparam \Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|StageOut[25]~47 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|StageOut[25]~47_combout  = (\Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout  & !\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Div1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Div1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Div1|auto_generated|divider|divider|StageOut[25]~47_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|StageOut[25]~47 .lut_mask = 16'h00AA;
+defparam \Div1|auto_generated|divider|divider|StageOut[25]~47 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1_cout  = CARRY((\Div1|auto_generated|divider|divider|StageOut[25]~59_combout ) # (\Div1|auto_generated|divider|divider|StageOut[25]~47_combout ))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[25]~59_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[25]~47_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1 .lut_mask = 16'h00EE;
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3_cout  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[26]~57_combout  & (!\Div1|auto_generated|divider|divider|StageOut[26]~46_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1_cout )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[26]~57_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[26]~46_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_6_result_int[1]~1_cout ),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3 .lut_mask = 16'h0001;
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5_cout  = CARRY((!\Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3_cout  & ((\Div1|auto_generated|divider|divider|StageOut[27]~56_combout ) # 
+// (\Div1|auto_generated|divider|divider|StageOut[27]~45_combout ))))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[27]~56_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[27]~45_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_6_result_int[2]~3_cout ),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5 .lut_mask = 16'h000E;
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7_cout  = CARRY((!\Div1|auto_generated|divider|divider|StageOut[28]~55_combout  & (!\Div1|auto_generated|divider|divider|StageOut[28]~44_combout  & 
+// !\Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5_cout )))
+
+	.dataa(\Div1|auto_generated|divider|divider|StageOut[28]~55_combout ),
+	.datab(\Div1|auto_generated|divider|divider|StageOut[28]~44_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_6_result_int[3]~5_cout ),
+	.combout(),
+	.cout(\Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7_cout ));
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7 .lut_mask = 16'h0001;
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8 (
+// Equation(s):
+// \Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8_combout  = \Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Div1|auto_generated|divider|divider|add_sub_6_result_int[4]~7_cout ),
+	.combout(\Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8 .lut_mask = 16'hF0F0;
+defparam \Div1|auto_generated|divider|divider|add_sub_6_result_int[5]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_io_ibuf \Val[0]~input (
+	.i(Val[0]),
+	.ibar(gnd),
+	.o(\Val[0]~input_o ));
+// synopsys translate_off
+defparam \Val[0]~input .bus_hold = "false";
+defparam \Val[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[56]~54 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[56]~54_combout  = (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & \Val[0]~input_o )
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datab(\Val[0]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[56]~54_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[56]~54 .lut_mask = 16'h8888;
+defparam \Mod0|auto_generated|divider|divider|StageOut[56]~54 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod0|auto_generated|divider|divider|StageOut[56]~55 (
+// Equation(s):
+// \Mod0|auto_generated|divider|divider|StageOut[56]~55_combout  = (\Val[0]~input_o  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout )
+
+	.dataa(\Val[0]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.cin(gnd),
+	.combout(\Mod0|auto_generated|divider|divider|StageOut[56]~55_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod0|auto_generated|divider|divider|StageOut[56]~55 .lut_mask = 16'h00AA;
+defparam \Mod0|auto_generated|divider|divider|StageOut[56]~55 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0_combout  = (\Mod0|auto_generated|divider|divider|StageOut[56]~54_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[56]~55_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[56]~54_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[56]~55_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0 .lut_mask = 16'hEEEE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  = (((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  = CARRY((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[60]~46_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  & (((\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1  & (!\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout  & 
+// (!\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  = CARRY((!\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout  & (!\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 )))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[61]~45_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~1 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & (((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & ((((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout )))))
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~5  = CARRY((!\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3  & ((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// (\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[62]~44_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~3 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  = !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~5 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 .lut_mask = 16'h0F0F;
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[16]~54 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[16]~54_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[4]~4_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[60]~58_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[16]~54 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[16]~54 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[16]~38 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[16]~38_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[16]~38_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[16]~38 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[16]~38 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[15]~55 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[15]~55_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[3]~2_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[15]~55 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[15]~55 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  = (\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[59]~47_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[59]~59_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[59]~47_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 .lut_mask = 16'hEEEE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[15]~39 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[15]~39_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[15]~39_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[15]~39 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[15]~39 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  = (((\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[15]~39_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  = CARRY((\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[15]~39_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[15]~39_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  & (((\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[16]~38_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1  & (!\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout  & 
+// (!\Mod1|auto_generated|divider|divider|StageOut[16]~38_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[16]~38_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[16]~38_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~1 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[18]~52 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[18]~52_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[6]~8_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[62]~56_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[18]~52_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[18]~52 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[18]~52 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[18]~36 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[18]~36_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[18]~36_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[18]~36 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[18]~36 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[17]~53 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[17]~53_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout  & ((\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ) # 
+// ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout  & !\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[5]~6_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datad(\Mod0|auto_generated|divider|divider|StageOut[61]~57_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[17]~53 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[17]~53 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[17]~37 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[17]~37_combout  = (\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[17]~37_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[17]~37 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[17]~37 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & (((\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[17]~37_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & ((((\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[17]~37_combout )))))
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~5  = CARRY((!\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3  & ((\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[17]~37_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[17]~37_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~3 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[18]~52_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[18]~36_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[18]~52_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[18]~36_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~5 ),
+	.combout(),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 .lut_mask = 16'h0001;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  = \Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 .lut_mask = 16'hF0F0;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[23]~56 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[23]~56_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[2]~2_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[17]~53_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[23]~56_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[23]~56 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[23]~56 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[23]~40 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[23]~40_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[23]~40_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[23]~40 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[23]~40 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[22]~57 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[22]~57_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[1]~0_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[16]~54_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[22]~57 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[22]~57 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[22]~41 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[22]~41_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[22]~41_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[22]~41 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[22]~41 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[21]~58 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[21]~58_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout  & !\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[0]~8_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_3_result_int[4]~6_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[15]~55_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[21]~58 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[21]~58 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[21]~42 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[21]~42_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[21]~42_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[21]~42 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[21]~42 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[20]~62 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[20]~62_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Val[2]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[2]~0_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Val[2]~input_o ),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[20]~62 .lut_mask = 16'hE200;
+defparam \Mod1|auto_generated|divider|divider|StageOut[20]~62 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  = (\Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[58]~49_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[58]~48_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[58]~49_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 .lut_mask = 16'hEEEE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[20]~43 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[20]~43_combout  = (\Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[20]~43_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[20]~43 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[20]~43 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout  = (((\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[20]~43_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  = CARRY((\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[20]~43_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[20]~43_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 .lut_mask = 16'h11EE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  & (((\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[21]~42_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1  & (!\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout  & 
+// (!\Mod1|auto_generated|divider|divider|StageOut[21]~42_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[21]~42_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[21]~42_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~1 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 .lut_mask = 16'hE101;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & (((\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[22]~41_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & ((((\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[22]~41_combout )))))
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~5  = CARRY((!\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3  & ((\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[22]~41_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[22]~41_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~3 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 .lut_mask = 16'hE10E;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[23]~56_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[23]~40_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[23]~56_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[23]~40_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~5 ),
+	.combout(),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 .lut_mask = 16'h0001;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  = \Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[4]~7_cout ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 .lut_mask = 16'hF0F0;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[28]~59 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[28]~59_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[22]~57_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[28]~59_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[28]~59 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[28]~59 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[28]~44 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[28]~44_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout  & !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[3]~4_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[28]~44_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[28]~44 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[28]~44 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[27]~60 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[27]~60_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[21]~58_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[27]~60 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[27]~60 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[27]~45 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[27]~45_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout  & !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[2]~2_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[27]~45 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[27]~45 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[26]~61 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[26]~61_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ) # 
+// ((\Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout  & !\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[0]~10_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[20]~62_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[26]~61 .lut_mask = 16'hF020;
+defparam \Mod1|auto_generated|divider|divider|StageOut[26]~61 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[26]~46 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[26]~46_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout  & !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[1]~0_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[26]~46 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[26]~46 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[25]~63 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[25]~63_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout  & ((\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & ((\Val[1]~input_o ))) # 
+// (!\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout  & (\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ))))
+
+	.dataa(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[1]~14_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|add_sub_7_result_int[8]~12_combout ),
+	.datac(\Val[1]~input_o ),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[25]~63 .lut_mask = 16'hE200;
+defparam \Mod1|auto_generated|divider|divider|StageOut[25]~63 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout  = (\Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ) # (\Mod0|auto_generated|divider|divider|StageOut[57]~53_combout )
+
+	.dataa(\Mod0|auto_generated|divider|divider|StageOut[57]~50_combout ),
+	.datab(\Mod0|auto_generated|divider|divider|StageOut[57]~53_combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 .lut_mask = 16'hEEEE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[25]~47 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[25]~47_combout  = (\Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout  & !\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout )
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[0]~10_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_5_result_int[5]~8_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[25]~47 .lut_mask = 16'h00AA;
+defparam \Mod1|auto_generated|divider|divider|StageOut[25]~47 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2_combout  = (((\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3  = CARRY((\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ) # (\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2 .lut_mask = 16'h11EE;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3  & (((\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3  & (!\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout  & 
+// (!\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout )))
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~3 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4 .lut_mask = 16'hE101;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5  & (((\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5  & ((((\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout )))))
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~7  = CARRY((!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5  & ((\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout ))))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~5 ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6_combout ),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~7 ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6 .lut_mask = 16'hE10E;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9_cout  = CARRY((!\Mod1|auto_generated|divider|divider|StageOut[28]~59_combout  & (!\Mod1|auto_generated|divider|divider|StageOut[28]~44_combout  & 
+// !\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~7 )))
+
+	.dataa(\Mod1|auto_generated|divider|divider|StageOut[28]~59_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|StageOut[28]~44_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~7 ),
+	.combout(),
+	.cout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9_cout ));
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9 .lut_mask = 16'h0001;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  = \Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9_cout 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[4]~9_cout ),
+	.combout(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10 .lut_mask = 16'hF0F0;
+defparam \Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[30]~48 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[30]~48_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (\Val[0]~input_o )) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & 
+// ((\Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0_combout )))
+
+	.dataa(\Val[0]~input_o ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[0]~0_combout ),
+	.datac(gnd),
+	.datad(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[30]~48_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[30]~48 .lut_mask = 16'hAACC;
+defparam \Mod1|auto_generated|divider|divider|StageOut[30]~48 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[31]~49 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[31]~49_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (((\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[1]~2_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|StageOut[25]~63_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[25]~47_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[31]~49_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[31]~49 .lut_mask = 16'hEEE2;
+defparam \Mod1|auto_generated|divider|divider|StageOut[31]~49 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[32]~50 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[32]~50_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (((\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[2]~4_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|StageOut[26]~61_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[26]~46_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[32]~50_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[32]~50 .lut_mask = 16'hEEE2;
+defparam \Mod1|auto_generated|divider|divider|StageOut[32]~50 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneive_lcell_comb \Mod1|auto_generated|divider|divider|StageOut[33]~51 (
+// Equation(s):
+// \Mod1|auto_generated|divider|divider|StageOut[33]~51_combout  = (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (((\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ) # 
+// (\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout )))) # (!\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout  & (\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6_combout ))
+
+	.dataa(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[3]~6_combout ),
+	.datab(\Mod1|auto_generated|divider|divider|add_sub_6_result_int[5]~10_combout ),
+	.datac(\Mod1|auto_generated|divider|divider|StageOut[27]~60_combout ),
+	.datad(\Mod1|auto_generated|divider|divider|StageOut[27]~45_combout ),
+	.cin(gnd),
+	.combout(\Mod1|auto_generated|divider|divider|StageOut[33]~51_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Mod1|auto_generated|divider|divider|StageOut[33]~51 .lut_mask = 16'hEEE2;
+defparam \Mod1|auto_generated|divider|divider|StageOut[33]~51 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign C[0] = \C[0]~output_o ;
+
+assign C[1] = \C[1]~output_o ;
+
+assign C[2] = \C[2]~output_o ;
+
+assign C[3] = \C[3]~output_o ;
+
+assign D[0] = \D[0]~output_o ;
+
+assign D[1] = \D[1]~output_o ;
+
+assign D[2] = \D[2]~output_o ;
+
+assign D[3] = \D[3]~output_o ;
+
+assign U[0] = \U[0]~output_o ;
+
+assign U[1] = \U[1]~output_o ;
+
+assign U[2] = \U[2]~output_o ;
+
+assign U[3] = \U[3]~output_o ;
+
+endmodule
